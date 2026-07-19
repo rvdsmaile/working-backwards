@@ -39,7 +39,7 @@ def unresolved_critical_findings(critique: Path) -> list[str]:
     return findings
 
 
-def validate(root: Path) -> list[str]:
+def validate(root: Path, require_handoff: bool = False) -> list[str]:
     errors = []
     initiative = root / "initiative.md"
     if not initiative.is_file():
@@ -47,6 +47,8 @@ def validate(root: Path) -> list[str]:
     phase = phase_from(initiative)
     if phase not in PHASES:
         return [f"invalid phase: {phase or 'missing'}"]
+    if require_handoff and phase != "handoff":
+        errors.append(f"technical delivery requires handoff phase, found {phase}")
     for filename in REQUIRED_BY_PHASE[phase]:
         if not (root / filename).is_file():
             errors.append(f"missing {filename} required for {phase}")
@@ -58,8 +60,9 @@ def validate(root: Path) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("initiative", type=Path)
+    parser.add_argument("--require-handoff", action="store_true", help="Require a completed product handoff")
     args = parser.parse_args()
-    errors = validate(args.initiative)
+    errors = validate(args.initiative, require_handoff=args.require_handoff)
     if errors:
         print("INVALID")
         print("\n".join(f"- {error}" for error in errors))

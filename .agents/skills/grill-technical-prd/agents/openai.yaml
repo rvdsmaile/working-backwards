@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grill Technical PRD"
+  short_description: "Pressure-test a technical design."
+  default_prompt: "Grill this technical handoff."

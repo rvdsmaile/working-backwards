@@ -28,6 +28,12 @@ The framework creates durable Markdown artifacts in `docs/working-backwards/<ini
 | `challenge-delivery` | Surface decision-level delivery risks and dependencies. |
 | `synthesize-working-backwards` | Resolve critiques and keep the narrative and decisions aligned. |
 | `handoff-working-backwards` | Create the final product brief and build plan. |
+| `start-technical-delivery` | Start technical delivery against a chosen implementation repository. |
+| `grill-technical-prd` | Resolve material architecture, contract, operations, and test decisions. |
+| `write-technical-prd` | Write a repository-aware technical PRD. |
+| `review-technical-prd` | Review a PRD before turning it into tracker items. |
+| `break-prd-into-issues` | Draft independently testable vertical-slice issues. |
+| `publish-issue-backlog` | Publish an approved backlog to the chosen tracker. |
 
 ## Getting started
 
@@ -61,6 +67,18 @@ Validate an initiative at any point:
 python3 .agents/working-backwards/scripts/validate_initiative.py \
   docs/working-backwards/<initiative-slug>
 ```
+
+## Technical delivery (v1.2)
+
+After product handoff, use `start-technical-delivery` with the completed initiative and the repository that will implement it. The skills inspect that repository's own instructions, architecture, planning conventions, recent learnings, verification commands, and tracker guidance before making technical decisions.
+
+```text
+completed handoff → technical grill → technical PRD → review → issue breakdown → approved tracker publication
+```
+
+The technical PRD is written in the target repository's established spec location—falling back to `docs/specs/`—and stays above implementation-plan detail. It captures repository fit, architecture, interfaces/data flow, test seams, risks, rollout, non-goals, and open decisions. A separate issue breakdown turns the approved design into dependency-ordered, vertical slices.
+
+Issue publishing is intentionally tracker-agnostic. The framework uses GitHub, Linear, Jira, local Markdown, or another workflow only when the user names it or the target repository documents it. Nothing is published until the user explicitly approves the draft backlog.
 
 ## Principles
 

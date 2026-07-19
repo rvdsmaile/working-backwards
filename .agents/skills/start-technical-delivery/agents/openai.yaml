@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start Technical Delivery"
+  short_description: "Start repository-aware technical delivery."
+  default_prompt: "Start technical delivery from this handoff."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Technical PRD"
+  short_description: "Review a technical PRD before issue slicing."
+  default_prompt: "Review this technical PRD."

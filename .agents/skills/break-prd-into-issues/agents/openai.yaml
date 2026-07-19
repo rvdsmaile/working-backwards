@@ -1,0 +1,4 @@
+interface:
+  display_name: "Break PRD into Issues"
+  short_description: "Create a vertical-slice issue backlog."
+  default_prompt: "Break this PRD into issues."

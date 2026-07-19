@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish Issue Backlog"
+  short_description: "Publish an approved tracker backlog."
+  default_prompt: "Publish this approved issue backlog."

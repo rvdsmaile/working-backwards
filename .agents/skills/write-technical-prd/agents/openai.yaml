@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Technical PRD"
+  short_description: "Write a repository-aware technical PRD."
+  default_prompt: "Write the technical PRD."
