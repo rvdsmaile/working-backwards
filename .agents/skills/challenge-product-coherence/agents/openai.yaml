@@ -1,0 +1,4 @@
+interface:
+  display_name: "Challenge Product Coherence"
+  short_description: "Pressure-test product coherence and scope."
+  default_prompt: "Challenge this draft for product coherence."

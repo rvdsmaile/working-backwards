@@ -1,0 +1,4 @@
+interface:
+  display_name: "Working Backwards"
+  short_description: "Start a guided working-backwards initiative."
+  default_prompt: "Start a working-backwards initiative."

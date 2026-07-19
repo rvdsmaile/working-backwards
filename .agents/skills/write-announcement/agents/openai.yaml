@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Announcement"
+  short_description: "Draft a future-facing product announcement."
+  default_prompt: "Draft the product announcement."

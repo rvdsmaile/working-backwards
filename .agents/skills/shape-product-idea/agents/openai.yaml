@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shape Product Idea"
+  short_description: "Clarify a product idea before drafting."
+  default_prompt: "Help shape this product idea."

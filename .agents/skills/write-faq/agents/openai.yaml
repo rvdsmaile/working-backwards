@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write FAQ"
+  short_description: "Create a clear customer-facing FAQ."
+  default_prompt: "Create the customer FAQ."

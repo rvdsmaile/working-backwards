@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handoff Working Backwards"
+  short_description: "Create a detailed product brief and build plan."
+  default_prompt: "Create the final working-backwards handoff."

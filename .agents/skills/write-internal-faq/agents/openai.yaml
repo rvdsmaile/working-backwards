@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Internal FAQ"
+  short_description: "Capture optional internal product questions."
+  default_prompt: "Create the internal FAQ."

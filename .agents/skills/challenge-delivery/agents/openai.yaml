@@ -1,0 +1,4 @@
+interface:
+  display_name: "Challenge Delivery"
+  short_description: "Pressure-test delivery risks and readiness."
+  default_prompt: "Challenge this draft for delivery readiness."

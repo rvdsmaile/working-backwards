@@ -1,0 +1,4 @@
+interface:
+  display_name: "Challenge Customer Value"
+  short_description: "Pressure-test value from a customer perspective."
+  default_prompt: "Challenge this draft for customer value."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Synthesize Working Backwards"
+  short_description: "Resolve critiques and advance an initiative."
+  default_prompt: "Resolve the working-backwards critiques."
